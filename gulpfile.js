@@ -58,13 +58,13 @@ gulp.task('watch-jsx', function() {
     entries: [path.ENTRY_POINT],
     transform: [reactify],
     debug: true,
-    cache: {}, packageCache: {}, fullPaths: true
+    cache: {}, packageCache: {}, fullPaths: false
   }));
 
   return watcher.on('update', function () {
     watcher.bundle()
       .pipe(source(path.OUT))
-      .pipe(gulp.dest(path.DEST_SRC))
+      .pipe(gulp.dest(path.DEST_BUILD))
       console.log('Updated');
   })
     .bundle()

@@ -129,20 +129,20 @@ var Main = React.createClass({
 		var currentFavorite = this.iscityInFavorites();
 
 		return (
-			
-			<h1>Temperature by location</h1>
+			<div>
+				<h1>Temperature by location </h1>
 
-			<Search onSearch={this.GetTemperature} />
+				<Search onSearch={this.GetTemperature} />
 
-			<div className="display">
-				<span className="diplay__digit">{this.state.temp}</span>
-				<SaveButton onStateChange={this.toggleFavorite} currentFavorite={currentFavorite} />
+				<div className="display">
+					<span className="diplay__digit">{this.state.temp}</span>
+					<SaveButton onStateChange={this.toggleFavorite} currentFavorite={currentFavorite} />
+				</div>
+
+				<div className="list">
+					<List list={this.state.favorites} />
+				</div>
 			</div>
-
-			<div className="list">
-				<List list={this.state.favorites} />
-			</div>
-
 		);
 	}
 
