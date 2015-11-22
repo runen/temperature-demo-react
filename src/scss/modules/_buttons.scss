@@ -1,0 +1,19 @@
+.btn {
+	width: 70px;
+	height: 70px;
+	background: $green;
+	color: #fff;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 70px;
+	font-size: 14px;
+	display: inline-block;
+	position: absolute;
+	right: -15px;
+	bottom: -15px;
+	cursor: pointer;
+}
+
+.btn--remove {
+	background: $red;
+}
